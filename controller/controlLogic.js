@@ -115,8 +115,8 @@ let getAllAvengers = (req, res) => {
 }
 let saveAvengers = (req, res) => {
     let avengersData = new avengersModel({
-        avengerName: req.body.avengerName,
-        characterName: req.body.characterName,
+        avengerName: req.body.avengersName,
+        characterName: req.body.charactersName,
         realName: req.body.realName,
         imageUrl: req.body.imageUrl,
         movie: req.body.movie.split(','),
