@@ -50,17 +50,17 @@ mongoose.connection.on('open', (err) => {
         console.log('DB opened success');
     }
 })
-mongoose.connection.on('close', (err) => {
-    if (err) {
-        console.log('db close error', err.message);
-    } else {
-        console.log('DB closed success');
-    }
-})
-mongoose.connection.on('stop', (err) => {
-    if (err) {
-        console.log('db stop error', err.message);
-    } else {
-        console.log('DB stoped success');
-    }
-})
+// mongoose.connection.on('close', (err) => {
+//     if (err) {
+//         console.log('db close error', err.message);
+//     } else {
+//         console.log('DB closed success');
+//     }
+// })
+// mongoose.connection.on('stop', (err) => {
+//     if (err) {
+//         console.log('db stop error', err.message);
+//     } else {
+//         console.log('DB stoped success');
+//     }
+// })
