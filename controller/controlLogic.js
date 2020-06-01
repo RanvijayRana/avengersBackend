@@ -11,7 +11,7 @@ const avengersModel = mongoose.model('avengers');
 let getAll = (req, res) => {
     usersModel.find({}).exec((err, result) => {
         if (err) {
-            let apiResponse = beResponse.generate(true, "error to fetch db data", 300, result);
+            let apiResponse = beResponse.generate(true, `error to fetch db data: - ${err.message} `, 302, null);
             res.send(apiResponse);
         } else {
             let apiResponse = beResponse.generate(false, "db query data", 200, result);

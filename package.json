@@ -20,5 +20,9 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
+  },
+  "apidoc": {
+    "title": "Custom apiDoc browser title",
+    "url": "https://localhost"
   }
 }
