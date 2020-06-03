@@ -41,6 +41,9 @@ let setRouter = (app) => {
      *          "data": null
      *      }
      */
+    app.get('/', (req, res) => {
+        res.send('hello Ranvijay');
+    })
     app.get(baseUrl + '/allUser', controller.getAll);
     app.post(baseUrl + '/signup', controller.signup);
     app.post(baseUrl + '/login', controller.login);
