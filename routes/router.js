@@ -41,7 +41,7 @@ let setRouter = (app) => {
      *          "data": null
      *      }
      */
-    app.get('/', (req, res) => {
+    app.get(baseUrl + '/', (req, res) => {
         res.send('hello Ranvijay');
     })
     app.get(baseUrl + '/allUser', controller.getAll);
