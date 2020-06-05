@@ -1,5 +1,6 @@
-const config = require('../config/appConfig')
+const config = require('../config/appConfig');
 const controller = require('../controller/controlLogic');
+const path = require('path');
 
 let setRouter = (app) => {
     baseUrl = config.apiVersion + '/avengers';
@@ -41,9 +42,10 @@ let setRouter = (app) => {
      *          "data": null
      *      }
      */
-    app.get(baseUrl + '/', (req, res) => {
-        res.send('hello Ranvijay');
-    })
+    app.get('/', (req, res) => {
+        // res.sendFile(__dirname, './../apidoc', 'index.html');
+        res.sendFile('index.html', { root: path.join(__dirname, './../apidoc') });
+    });
     app.get(baseUrl + '/allUser', controller.getAll);
     app.post(baseUrl + '/signup', controller.signup);
     app.post(baseUrl + '/login', controller.login);

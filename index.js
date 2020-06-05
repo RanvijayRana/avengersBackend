@@ -15,6 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(globalErr.errorHandle);
+app.use(express.static('apidoc'));
 
 let modelPath = './models';
 fs.readdirSync(modelPath).forEach(file => {
